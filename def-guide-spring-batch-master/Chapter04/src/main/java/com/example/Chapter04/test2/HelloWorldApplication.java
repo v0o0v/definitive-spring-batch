@@ -1,4 +1,4 @@
-package io.spring.batch.helloworld;
+package com.example.Chapter04.test2;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -35,7 +35,7 @@ public class HelloWorldApplication {
 
 
 
-						return RepeatStatus.FINISHED;
+						return RepeatStatus.CONTINUABLE;
 					}
 				}).build();
 	}
