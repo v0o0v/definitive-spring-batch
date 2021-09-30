@@ -63,7 +63,6 @@ public class HelloWorldTasklet {
                             .getExecutionContext();
 
                     jobContext.put("name",name);
-
                     return RepeatStatus.FINISHED;
                 })
                 .build();

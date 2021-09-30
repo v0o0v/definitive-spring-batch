@@ -39,15 +39,15 @@ public class BatchScheduledJob extends QuartzJobBean {
 
 	@Override
 	protected void executeInternal(JobExecutionContext context) {
-//		JobParameters jobParameters = new JobParametersBuilder(this.jobExplorer)
-//				.getNextJobParameters(this.job)
-//				.toJobParameters();
-//
-//		try {
-//			this.jobLauncher.run(this.job, jobParameters);
-//		}
-//		catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		JobParameters jobParameters = new JobParametersBuilder(this.jobExplorer)
+				.getNextJobParameters(this.job)
+				.toJobParameters();
+
+		try {
+			this.jobLauncher.run(this.job, jobParameters);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
